@@ -4,12 +4,20 @@ const { use } = require("express/lib/application");
 const app = express();
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const session = require('express-session');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/'));
 app.use(cors());
+
+app.use(session({
+    secret: 'secretpassword',
+    secure: true,
+    resave: true,
+    saveUninitialized: true
+}));
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -68,6 +76,9 @@ app.post('/login', (req,res) => {
     let name = req.body.nome;
     let pass = req.body.pass;
     let tam = usuarios.length;
+    if(!req.session.user){
+        req.session.user = name;
+    }
     if(validateUser(name,pass,tam)) {
         return res.redirect("/logado");
     }else{
@@ -79,6 +90,12 @@ app.post('/login', (req,res) => {
 app.get('/logado', (req,res) => {
     let users = usuarios;
     res.render("home-email", {usuario: users});
+})
+
+app.get('/logout', (req,res) => {
+    req.session.destroy(function() {
+        return res.redirect("/login");
+    });
 })
 
 app.post('/sendmail', (req,res) => {
