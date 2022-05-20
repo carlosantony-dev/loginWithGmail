@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background: linear-gradient(50deg, #4169E1, #00BFFF);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    background-color: white;
+    max-width: 350px;
+    min-height: 40vh;
+    padding: 2em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+main.container-home {
+    background-color: white;
+    max-width: 710px;
+    min-height: 45vh;
+    padding: 2em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-left: 15em;
+}
+
+main h2 {
+    font-weight: 600;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+main h2::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 5px;
+    background: linear-gradient(50deg, #4169E1, #00BFFF);
+
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type='submit']:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(50deg, #4169E1, #00BFFF);
+}
+
+.input-field {
+    position: relative;
+
+}
+
+form .input-field:first-child{
+    margin-bottom: 1em;
+}
+
+.input-field .underline::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.input-field .underline::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg,#4169E1, #00BFFF);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+
+.input-field input {
+    outline: none;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1em;
+}
+
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"] {
+    margin-top: 8em;
+    padding: 0.4em;
+    background: linear-gradient(to left, #4169E1,#1E90FF);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.footer span {
+    font-size: 0.8em;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+button{
+    position: relative;
+    top: -15em;
+    left: -14em;
+}
+
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+
+.myButtonHome {
+    position: relative;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+    left: -22em;
+    margin-bottom: 5em;
+}
+
+.myButtonHome:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+
+#homestyles{
+    margin-bottom: 2em;
+}
+
+#text-area{
+    margin-top: 2em;
+}
+
+

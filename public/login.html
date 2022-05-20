@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilo.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Login Form</title>
+
+</head>
+<body>
+    <script>
+        function go(){
+            window.location.replace("/");
+        }
+    </script>
+    <main class="container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <div class="input-field">
+                <input type="text" name="nome" id="username" placeholder="Enter your username">
+                <div class="underline"></div>                    
+            </div>
+
+            <div class="input-field">
+                <input type="password" name="pass" id="password" placeholder="Enter your password">
+                <div class="underline"></div>                    
+            </div>
+            <input type="submit" value="Entrar no sistema">
+        </form>
+    </main>
+    <button class ="myButton" onclick="go()">Ir para Cadastro</button>
+</body>
+</html>
